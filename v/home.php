@@ -204,7 +204,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-6 col-sm-12">
-									<!-- BEGIN PORTLET-->
+									<!-- BEGIN PORTLET
 									<div class="portlet light ">
 										<div class="portlet-title">
 											<div class="caption caption-md">
@@ -302,10 +302,10 @@
 											</div>
 										</div>
 									</div>
-									<!-- END PORTLET-->
+									END PORTLET-->
 								</div>
 								<div class="col-md-6 col-sm-12">
-									<!-- BEGIN PORTLET-->
+									<!-- BEGIN PORTLET
 									<div class="portlet light ">
 										<div class="portlet-title">
 											<div class="caption caption-md">
@@ -329,7 +329,7 @@
 												<div class="col-md-6 col-sm-6 col-xs-6">
 													<div class="stat-left">
 														<div class="stat-chart">
-															<!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break -->
+															<!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break
 															<div id="sparkline_bar"></div>
 														</div>
 														<div class="stat-number">
@@ -345,7 +345,7 @@
 												<div class="col-md-6 col-sm-6 col-xs-6">
 													<div class="stat-right">
 														<div class="stat-chart">
-															<!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break -->
+															<!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break
 															<div id="sparkline_bar2"></div>
 														</div>
 														<div class="stat-number">
@@ -464,7 +464,7 @@
 											</div>
 										</div>
 									</div>
-									<!-- END PORTLET-->
+									END PORTLET-->
 								</div>
 							</div>
 							<!-- END PAGE CONTENT INNER -->

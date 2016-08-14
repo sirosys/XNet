@@ -3,6 +3,8 @@
 	if ($_SERVER['SCRIPT_FILENAME'] == __FILE__) {
 		die ("Akses Ditolak");
 	} else {
+
+		// Panggil configuration file untuk Database
 		require_once "./lib/conf.php";
 
 		class authModel {
@@ -49,18 +51,43 @@
 			}
 		}
 
+		class searchModel {
+			public function search($search){
+
+				$query = mysql_query("SELECT
+					sirosys.usr.usrID, sirosys.usr.usrEmail, sirosys.usr.usrFname, sirosys.usr.usrLname, sirosys.usr.usrCell
+					FROM sirosys.usr
+					WHERE sirosys.usr.usrID = '$search'
+					OR sirosys.usr.usrEmail LIKE '$search' 
+					OR sirosys.usr.usrFname LIKE '%$search%'
+					OR sirosys.usr.usrLname LIKE '%$search%'
+				");
+
+			//	$array = mysql_fetch_assoc($query);
+				while ($array = mysql_fetch_assoc($query)) {$rows[] = $array;}
+				
+
+			//	if (mysql_num_rows($query)) {
+			//		header("HTTP/1.1 200");
+					return $rows;
+			//	} else {
+			//		return header("HTTP/1.1 401"); echo "Tidak Ada Data";
+			//	}
+
+			}
+		}		
+
 		class netRegModel {
 			public function product(){
 				
 				$query = mysql_query("SELECT * FROM sirosys.usr");
 
-				while ($array = mysql_fetch_assoc($query)) {
-					$hasil[] = $array;
-				}
+				while ($array = mysql_fetch_assoc($query)) {$hasil[] = $array;}
 
 				return $hasil;
 				
 			}
 		}
+
 	}
 ?>

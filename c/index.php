@@ -26,6 +26,16 @@
 		}
 
 		class contentControl {
+			
+			public function search(){
+
+			//	$search = $_GET['search'];
+				$query = new searchModel();
+
+				require_once "v/search.php";
+			}
+			
+
 			public function home() {
 				require_once "v/home.php";
 			}

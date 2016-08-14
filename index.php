@@ -31,21 +31,23 @@
 				$content = new authControl();
 				$content->auth($usrEmail, $usrPass);
 			} else  {
-				header("HTTP/1.1 405");
+				header("HTTP/1.1 405"); echo "method salah"; header("location:home");
 			}
 			break;
-		
+			
 		case "logout":
 			setcookie("siro[usrID]", "", time()-60*60*24*365, "/"); 
 			session_destroy();
 			header("location:./");
 			break;
-
+		
+		/*
 		case "sironetReg":
 			$content = new pageControl();
 			$content->sironetReg();
 			break;
-
+		*/
+		
 		default:
 			if (!isset($_SESSION['usrID'])) {// Kalau session tidak ada
 				header("location:login");
